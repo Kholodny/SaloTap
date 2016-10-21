@@ -651,11 +651,7 @@ Prefab:
     - target: {fileID: 114000014291631036, guid: 787f95abea824f24b9be1571d7237d06,
         type: 2}
       propertyPath: plusXP
-<<<<<<< HEAD
-      value: 1488
-=======
       value: 228
->>>>>>> origin/master
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 787f95abea824f24b9be1571d7237d06, type: 2}
