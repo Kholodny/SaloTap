@@ -925,6 +925,7 @@ GameObject:
   - 212: {fileID: 387009311}
   - 114: {fileID: 387009314}
   - 61: {fileID: 387009313}
+  - 95: {fileID: 387009315}
   m_Layer: 0
   m_Name: menuBtn
   m_TagString: Untagged
@@ -972,8 +973,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 387009310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.028430969, y: 3.78, z: -6}
-  m_LocalScale: {x: 0.8378541, y: 0.8378541, z: 0.8378541}
+  m_LocalPosition: {x: -0.03, y: 3.84, z: -6}
+  m_LocalScale: {x: 0.4642108, y: 0.4642108, z: 0.4642108}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1003,8 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba35d58f48406845a3675b5e2d0986d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxImage: {fileID: 0}
-  minImage: {fileID: 0}
+  maxImage: {fileID: 21300000, guid: 9438f5187d72f59448ef91bd5c010ffa, type: 3}
+  minImage: {fileID: 21300000, guid: 9438f5187d72f59448ef91bd5c010ffa, type: 3}
   action: ShowMenu
   menuOverlay: {fileID: 1434020149}
   menuButtons:
@@ -1012,6 +1013,23 @@ MonoBehaviour:
   - {fileID: 334561364}
   - {fileID: 1578065898}
   - {fileID: 263907891}
+--- !u!95 &387009315
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 387009310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07bff18367b3426498e5e530ccc94474, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &412830471
 GameObject:
   m_ObjectHideFlags: 0
