@@ -148,7 +148,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2be66c984987f0644aee44fa87a569b7, type: 3}
     m_FontSize: 14
     m_FontStyle: 3
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 3
@@ -331,7 +331,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2be66c984987f0644aee44fa87a569b7, type: 3}
     m_FontSize: 32
     m_FontStyle: 3
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 3
@@ -444,6 +444,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010962795850, guid: 204a7b870a4ec0c4d9bed351810bf5ec,
+        type: 2}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 204a7b870a4ec0c4d9bed351810bf5ec, type: 2}
