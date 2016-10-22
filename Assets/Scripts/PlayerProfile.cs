@@ -65,6 +65,8 @@ public class PlayerProfile : MonoBehaviour {
 		xpToLvlup = ((levelDisplay + 1) * ((levelDisplay + 1) - 1) / 2) * 1000;
 		if (xp >= xpToLvlup) {
 			levelDisplay++;
+			xp = 0;
+			levelSlider.value = 0;
 		}//Конец реализации поднятия уровня
 
 		//Реализация ползунка опыта
