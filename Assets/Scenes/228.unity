@@ -265,9 +265,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 135799914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c86a05490340c674f9c7b9d31c623c60, type: 3}
+  m_Script: {fileID: 11500000, guid: e0ef50b08378235468fb5647db8b8b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  profile: {fileID: 0}
 --- !u!1 &162849228
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +507,7 @@ Prefab:
     - target: {fileID: 224000011416618334, guid: 787f95abea824f24b9be1571d7237d06,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 224000011416618334, guid: 787f95abea824f24b9be1571d7237d06,
         type: 2}
@@ -1080,8 +1081,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 22.2, y: -8.4}
-  m_SizeDelta: {x: 76, y: 12}
+  m_AnchoredPosition: {x: -45.9, y: -0.0000023842}
+  m_SizeDelta: {x: -69.7, y: -3.391}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796790803
 MonoBehaviour:
@@ -1109,7 +1110,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1454,8 +1455,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.16818406, y: 0.86839265}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1, y: 4.399994}
-  m_SizeDelta: {x: -2, y: -8.7}
+  m_AnchoredPosition: {x: -32.167, y: 21.7}
+  m_SizeDelta: {x: 60.3, y: -43.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1198356366
 MonoBehaviour:
@@ -1537,8 +1538,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.21300001, y: 0.33770907}
   m_AnchorMax: {x: 0.536, y: 0.6754728}
-  m_AnchoredPosition: {x: 8.1, y: -8.4}
-  m_SizeDelta: {x: 11.300003, y: 18}
+  m_AnchoredPosition: {x: -3.2, y: -0.22832}
+  m_SizeDelta: {x: -11.6, y: 3.6385}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210091136
 MonoBehaviour:
@@ -1566,7 +1567,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
