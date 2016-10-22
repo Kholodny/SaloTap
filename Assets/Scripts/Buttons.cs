@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-//using UnityEngine.Sprite;
+using UnityEngine.UI;
 
 public class Buttons : MonoBehaviour {
 	public Sprite maxImage, minImage;
 	public string action;
+	public GameObject menuOverlay;
+	public GameObject[] menuButtons;
 
 
 	void OnMouseDown(){
@@ -20,12 +22,32 @@ public class Buttons : MonoBehaviour {
 		switch (action) {
 		case "Play":
 			Application.LoadLevel ("228");
-			Application.OpenURL("http://geyportal.net/uploads/posts/2014-10/1414098012_h11nkd6cij0.jpg");
+			//Application.OpenURL("http://geyportal.net/uploads/posts/2014-10/1414098012_h11nkd6cij0.jpg");
+			break;
+
+		case "ShowMenu":
+			
+			menuButtons [0].SetActive (false);
+			menuOverlay.SetActive (true);
+			for (int i = 1; i < menuButtons.Length; i++) {
+				menuButtons [i].SetActive (true);
+			}
 			break;
 
 		case "MainMenu":
 			Application.LoadLevel ("mainMenu");
 			break;
+
+		case "CloseMenu":
+			menuButtons [0].SetActive (true);
+			menuOverlay.SetActive (false);
+			for (int i = 1; i < menuButtons.Length; i++) {
+				menuButtons [i].SetActive (false);
+
+			}
+			break;
 		}
+
+		
 	}
 }
