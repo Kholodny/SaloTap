@@ -11,8 +11,8 @@ public class Click : MonoBehaviour {
 		profile.scoreDisplay.text = "Score:" + CurrencyConverter.Instance.GetCurrencyIntoString (profile.score, false, false);
 		//profile.scoreDisplay.text = "Score: " + profile.score;
 		profile.levelSet.text = "LvL:" + profile.levelDisplay;
-		profile.xpShow.text = profile.xp + " XP / ";
-		profile.xpLvlShow.text = profile.xpToLvlup + " Next LvL Xp";
+		profile.xpShow.text = profile.xp + " XP / " + profile.xpToLvlup + " Next Lvl XP"; //Вывод экспы к уровню
+		//profile.xpLvlShow.text = profile.xpToLvlup + " Next LvL Xp";
 	}
 
 	public void Clicked(){
