@@ -6,7 +6,7 @@ public class Buttons : MonoBehaviour {
 	public Sprite maxImage, minImage;
 	public string action;
 	public GameObject menuOverlay;
-	public GameObject[] menuButtons;
+	//public GameObject[] menuButtons;
 
 
 	void OnMouseDown(){
@@ -18,20 +18,20 @@ public class Buttons : MonoBehaviour {
 
 	}
 
-	void OnMouseUpAsButton(){
+	public void OnMouseUpAsButton(){
 		switch (action) {
 		case "Play":
-			Application.LoadLevel ("228");
+			Application.LoadLevel ("gameScene");
 			//Application.OpenURL("http://geyportal.net/uploads/posts/2014-10/1414098012_h11nkd6cij0.jpg");
 			break;
 
 		case "ShowMenu":
 			
-			menuButtons [0].SetActive (false);
+			//menuButtons [0].SetActive (false);
 			menuOverlay.SetActive (true);
-			for (int i = 1; i < menuButtons.Length; i++) {
+			/*for (int i = 1; i < menuButtons.Length; i++) {
 				menuButtons [i].SetActive (true);
-			}
+			}*/
 			break;
 
 		case "MainMenu":
@@ -39,12 +39,22 @@ public class Buttons : MonoBehaviour {
 			break;
 
 		case "CloseMenu":
-			menuButtons [0].SetActive (true);
+			//menuButtons [0].SetActive (true);
 			menuOverlay.SetActive (false);
-			for (int i = 1; i < menuButtons.Length; i++) {
+			/*for (int i = 1; i < menuButtons.Length; i++) {
 				menuButtons [i].SetActive (false);
 
-			}
+			}*/
+			break;
+
+		case "RestartQST":
+			Application.LoadLevel ("quests");
+			Debug.Log ("work");
+			break;
+		
+		case "gameScene":
+			Application.LoadLevel ("gameScene");
+			//Debug.Log ("work");
 			break;
 		}
 
