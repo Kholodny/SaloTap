@@ -6,19 +6,21 @@ public class Buttons : MonoBehaviour {
 	public Sprite maxImage, minImage;
 	public string action;
 	public GameObject menuOverlay;
-	public GameObject[] menuButtons;
+	public Button menuButton;
+	public Button foobObj;
+	//public GameObject[] menuButtons;
 
 
-	void OnMouseDown(){
+	 void OnMouseDown(){
 		GetComponent<SpriteRenderer> ().sprite = minImage;
 	}
 
-	void OnMouseUp(){
+	 void OnMouseUp(){
 		GetComponent<SpriteRenderer> ().sprite = maxImage;
 
 	}
 
-	void OnMouseUpAsButton(){
+	public void OnMouseUpAsButton(){
 		switch (action) {
 		case "Play":
 			Application.LoadLevel ("228");
@@ -26,12 +28,9 @@ public class Buttons : MonoBehaviour {
 			break;
 
 		case "ShowMenu":
-			
-			menuButtons [0].SetActive (false);
 			menuOverlay.SetActive (true);
-			for (int i = 1; i < menuButtons.Length; i++) {
-				menuButtons [i].SetActive (true);
-			}
+			menuButton.interactable = false;
+			foobObj.interactable = false;
 			break;
 
 		case "MainMenu":
@@ -39,12 +38,9 @@ public class Buttons : MonoBehaviour {
 			break;
 
 		case "CloseMenu":
-			menuButtons [0].SetActive (true);
 			menuOverlay.SetActive (false);
-			for (int i = 1; i < menuButtons.Length; i++) {
-				menuButtons [i].SetActive (false);
-
-			}
+			menuButton.interactable = true;
+			foobObj.interactable = true;
 			break;
 		}
 
