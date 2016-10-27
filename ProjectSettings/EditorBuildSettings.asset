@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/quests.unity
   - enabled: 1
     path: Assets/Scenes/boss1.unity
+  - enabled: 1
+    path: Assets/Scenes/bossPicker.unity

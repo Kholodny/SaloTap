@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxImage: {fileID: 0}
   minImage: {fileID: 0}
-  action: RestartQST
+  action: BossPicker
   menuOverlay: {fileID: 0}
   bossName: 
 --- !u!114 &919817575

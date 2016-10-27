@@ -61,6 +61,10 @@ public class Buttons : MonoBehaviour {
 		case "Boss":
 			Application.LoadLevel (bossName);
 			break;
+		
+		case "BossPicker":
+			Application.LoadLevel ("bossPicker");
+			break;
 		}
 	}
 }
