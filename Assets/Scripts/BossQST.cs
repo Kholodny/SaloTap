@@ -8,10 +8,14 @@ public class BossQST : MonoBehaviour {
 	private float BossMaxHP;
 	public PlayerProfile player;
 	public float timeToLose;
-	//private float timeToLoseINNER;
+	private float timeToLoseINNER;
 	public Slider hpSlider;
 	private bool isPause = false;
 	public GameObject winLosePanel;
+	public Button startGame;
+	public GameObject preGamePanel;
+	public string bossSceneToReload;
+	public GameObject shopBt;
 
 	//Переменные для вывода
 	public Text time;
@@ -22,6 +26,9 @@ public class BossQST : MonoBehaviour {
 
 
 	void Start () {
+
+		preGamePanel.SetActive (true);
+		//Time.timeScale = 1;
 		timeToLose = timeToLose;
 		hpSlider.maxValue = BossHP;
 		BossMaxHP = BossHP;
@@ -30,6 +37,13 @@ public class BossQST : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
+		if (preGamePanel.activeSelf == true) {
+			Time.timeScale = 0;
+		} else {
+			Time.timeScale = 1;
+		}
+
+
 		if (isPause == false) { // если пауза не стоит -> делать:
 			TimerOfLose ();
 			time.text = timeToLose.ToString ("f2");
@@ -65,12 +79,18 @@ public class BossQST : MonoBehaviour {
 
 
 	public void RestartLevel(){
-		isPause = false;
-		Application.LoadLevel ("quests");
+		Application.LoadLevel (bossSceneToReload);
+		//preGamePanel.SetActive (true);
 	}
 
 	public void setIsPause(bool pause){
 		this.isPause = pause;
+	}
+
+	public void ClikToStart(){
+		shopBt.SetActive (false);
+		timeToLose = 15.04f;
+		preGamePanel.SetActive (false);
 	}
 
 }

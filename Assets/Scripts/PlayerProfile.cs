@@ -15,6 +15,7 @@ public class PlayerProfile : MonoBehaviour {
 	public Color standard;
 	public Text levelSet;
 
+
 	//test
 	public Text xpShow;
 	public float xpToLvlup;

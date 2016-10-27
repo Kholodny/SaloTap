@@ -6,6 +6,7 @@ public class Buttons : MonoBehaviour {
 	public Sprite maxImage, minImage;
 	public string action;
 	public GameObject menuOverlay;
+	public string bossName;
 	//public GameObject[] menuButtons;
 
 
@@ -56,8 +57,10 @@ public class Buttons : MonoBehaviour {
 			Application.LoadLevel ("gameScene");
 			//Debug.Log ("work");
 			break;
-		}
 
-		
+		case "Boss":
+			Application.LoadLevel (bossName);
+			break;
+		}
 	}
 }
