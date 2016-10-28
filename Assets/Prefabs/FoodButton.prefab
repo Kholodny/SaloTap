@@ -233,16 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ef50b08378235468fb5647db8b8b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gpc: {fileID: 0}
-  goldDisplay: {fileID: 0}
-  gold: 0
-  goldPerClick: 1
-  levelSlider: {fileID: 0}
-  levelDisplay: 1
-  xp: 0
-  affordable: {r: 0.9411765, g: 0.47058824, b: 0.47058824, a: 1}
-  standard: {r: 0.74264705, g: 0.74264705, b: 0.74264705, a: 1}
-  levelSet: {fileID: 0}
+  profile: {fileID: 0}
 --- !u!114 &114000013691455086
 MonoBehaviour:
   m_ObjectHideFlags: 1

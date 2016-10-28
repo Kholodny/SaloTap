@@ -14,14 +14,48 @@ public class PlayerProfile : MonoBehaviour {
 	public Color affordable;
 	public Color standard;
 	public Text levelSet;
+	public static int Coins;
+	public static int Gold;
 
 
 	//test
 	public Text xpShow;
 	public float xpToLvlup;
 	public Text xpLvlShow;
-	public float plusXP;
+	public float plusXP = 1;
 
+
+	void Awake(){
+		LoadGame ();
+	}
+
+
+
+	void Update(){
+		SaveGame ();
+	}
+
+	void SaveGame(){
+		PlayerPrefs.SetFloat ("XPtoLVL", xpToLvlup);
+		PlayerPrefs.SetFloat ("Score", score);
+		PlayerPrefs.SetInt ("Level", levelDisplay);
+		PlayerPrefs.SetInt ("Damage", ptsPerClick);
+		PlayerPrefs.SetFloat ("XP", xp);
+		//PlayerPrefs.SetFloat ("XPBoost", plusXP);
+		PlayerPrefs.Save ();
+	}
+
+	void LoadGame(){
+		xp = PlayerPrefs.GetFloat ("XP");
+		score = PlayerPrefs.GetFloat ("Score");
+		levelDisplay = PlayerPrefs.GetInt ("Level");
+		levelSlider.value = PlayerPrefs.GetFloat ("XP");
+		ptsPerClick = PlayerPrefs.GetInt ("Damage");
+		levelSlider.maxValue = PlayerPrefs.GetFloat ("XPtoLVL");
+		xpToLvlup = PlayerPrefs.GetFloat ("XPtoLVL");
+		//plusXP = PlayerPrefs.GetFloat ("XPBoost");
+
+	}
 
 
 	//Getters/Setters

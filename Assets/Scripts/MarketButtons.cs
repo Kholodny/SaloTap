@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MarketButtons : MonoBehaviour {
 	public GameObject panel_1;
@@ -15,5 +16,12 @@ public class MarketButtons : MonoBehaviour {
 	public void pickAnotherShop(){
 		panel_1.SetActive (false);
 		panel_2.SetActive (true);
+	}
+
+	public void ConfirmPurchInShop(){
+		MarketItem.acceptToBuy = true;
+	}
+	public void DiscardPurchInShop(){
+		MarketItem.acceptToBuy = false;
 	}
 }

@@ -39,11 +39,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gpc: {fileID: 0}
-  scoreDisplay: {fileID: 114000010962795850, guid: 204a7b870a4ec0c4d9bed351810bf5ec,
-    type: 2}
+  scoreDisplay: {fileID: 0}
+  score: 0
+  ptsPerClick: 1
   levelSlider: {fileID: 0}
+  levelDisplay: 1
+  xp: 0
+  affordable: {r: 0, g: 0, b: 0, a: 0}
+  standard: {r: 0, g: 0, b: 0, a: 0}
+  levelSet: {fileID: 0}
   xpShow: {fileID: 0}
+  xpToLvlup: 0
   xpLvlShow: {fileID: 0}
+  plusXP: 0
 --- !u!224 &224000011416618334
 RectTransform:
   m_ObjectHideFlags: 1
