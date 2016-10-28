@@ -11,14 +11,14 @@ public class UpgradeManager : MonoBehaviour {
 	public int clickPower;
 	public string itemName;
 	private float _newCost;
-	private float baseCost;
+//	private float baseCost;
 	public Color affordable;
 	public Color standard;
 	private Slider _slider;
 	public PlayerProfile profile;
 
 	void Start(){
-		baseCost = cost;
+		//baseCost = cost;
 		_slider = GetComponentInChildren<Slider> ();
 
 	}

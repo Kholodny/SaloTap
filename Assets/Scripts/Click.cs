@@ -16,21 +16,10 @@ public class Click : MonoBehaviour {
 	}
 
 	public void Clicked(){
-		//profile.getScore() += profile.getPtsPerClick();
-		//profile.getXP = profile.getXP + 100.0f;
-		//levelDisplay++;
-
-		/*float upScore = (profile.getScore() + profile.getPtsPerClick());
-		profile.setScore(upScore);
-		profile.setXP(profile.getXP() + 100.0f);
-		profile.LevelUp();*/
-
-
 		//New Version
 		profile.score += profile.ptsPerClick;
 		profile.xp = profile.xp + profile.plusXP;
 		profile.LevelUp ();
-		Debug.Log ("228");
 
 	}
 }
