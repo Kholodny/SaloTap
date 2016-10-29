@@ -13,7 +13,7 @@ public class MarketItem : MonoBehaviour {
 	//public int damage;
 
 
-	void Update(){
+	/*void Update(){
 		if (isBought == false) {
 			item.interactable = false;
 		} else
@@ -26,9 +26,9 @@ public class MarketItem : MonoBehaviour {
 	void buyItem(){
 		confirmPanel.SetActive (true);
 		if (isBought == false) {
-			if (PlayerProfile.Coins >= price) {
+//			if (PlayerProfile.Coins >= price) {
 				if (acceptToBuy == true) {
-					PlayerProfile.Coins -= price;
+					//PlayerProfile.Coins -= price;
 					item.interactable = true;
 					isBought = true;
 
@@ -37,7 +37,7 @@ public class MarketItem : MonoBehaviour {
 		}
 		confirmPanel.SetActive (false);
 		acceptToBuy = false;
-	}
+	}*/
 
 	/*bool ShowWarningBeforeBuy(){
 		confirmPanel.SetActive (true);

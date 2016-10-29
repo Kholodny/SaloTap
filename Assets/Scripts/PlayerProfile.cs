@@ -14,24 +14,32 @@ public class PlayerProfile : MonoBehaviour {
 	public Color affordable;
 	public Color standard;
 	public Text levelSet;
-	public static int Coins;
-	public static int Gold;
 
+	//weapons
+
+	public WeaponObject[] weapons;
+	public int currentWeapon;
+	public Image weaponImage;
 
 	//test
 	public Text xpShow;
 	public float xpToLvlup;
 	public Text xpLvlShow;
 	public float plusXP = 1;
-
+	public  int Coins = 0;
+	public  int Gold = 0;
 
 	void Awake(){
+		//PlayerPrefs.DeleteAll ();
+		//PlayerPrefs.Save ();
 		LoadGame ();
 	}
 
 
 
 	void Update(){
+		ptsPerClick = weapons [currentWeapon].damage;
+		weaponImage.sprite = weapons [currentWeapon].itemImage;
 		SaveGame ();
 	}
 
@@ -39,6 +47,7 @@ public class PlayerProfile : MonoBehaviour {
 		PlayerPrefs.SetFloat ("XPtoLVL", xpToLvlup);
 		PlayerPrefs.SetFloat ("Score", score);
 		PlayerPrefs.SetInt ("Level", levelDisplay);
+		PlayerPrefs.SetInt ("Coins", Coins);
 		PlayerPrefs.SetInt ("Damage", ptsPerClick);
 		PlayerPrefs.SetFloat ("XP", xp);
 		//PlayerPrefs.SetFloat ("XPBoost", plusXP);
@@ -53,6 +62,7 @@ public class PlayerProfile : MonoBehaviour {
 		ptsPerClick = PlayerPrefs.GetInt ("Damage");
 		levelSlider.maxValue = PlayerPrefs.GetFloat ("XPtoLVL");
 		xpToLvlup = PlayerPrefs.GetFloat ("XPtoLVL");
+		Coins = PlayerPrefs.GetInt ("Coins");
 		//plusXP = PlayerPrefs.GetFloat ("XPBoost");
 
 	}
