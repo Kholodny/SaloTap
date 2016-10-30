@@ -11,9 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3eba7eb2b0c3b446b0c25ea977261cd, type: 3}
   m_Name: Fork_Level3
   m_EditorClassIdentifier: 
-  weaponName: Fork Level 3
-  cost: 150
-  description: Level 3
+  weaponName: Vilka lvl 3
+  cost: 55
+  description: 'Damage: 10'
   itemImage: {fileID: 21300000, guid: 8c1c743eb08073f4d97404092e95905c, type: 3}
-  damage: 30
+  damage: 10
   isBougth: 0
+  levelToOpen: 3

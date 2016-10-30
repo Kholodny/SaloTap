@@ -21,6 +21,12 @@ public class PlayerProfile : MonoBehaviour {
 	public int currentWeapon;
 	public Image weaponImage;
 
+	//Bosses
+
+	public BossObject[] bosses;
+	public int currentBoss;
+	public Image bossImage;
+
 	//test
 	public Text xpShow;
 	public float xpToLvlup;
@@ -50,12 +56,14 @@ public class PlayerProfile : MonoBehaviour {
 		PlayerPrefs.SetInt ("Coins", Coins);
 		PlayerPrefs.SetInt ("Damage", ptsPerClick);
 		PlayerPrefs.SetFloat ("XP", xp);
+		PlayerPrefs.SetInt ("WeaponSelected", currentWeapon);
 		//PlayerPrefs.SetFloat ("XPBoost", plusXP);
 		PlayerPrefs.Save ();
 	}
 
 	void LoadGame(){
 		xp = PlayerPrefs.GetFloat ("XP");
+		currentWeapon = PlayerPrefs.GetInt ("WeaponSelected");
 		score = PlayerPrefs.GetFloat ("Score");
 		levelDisplay = PlayerPrefs.GetInt ("Level");
 		levelSlider.value = PlayerPrefs.GetFloat ("XP");

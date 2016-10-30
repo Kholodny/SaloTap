@@ -11,8 +11,11 @@ public class WeaponObject : ScriptableObject {
 	public Sprite itemImage;
 	public int damage = 10;
 	public bool isBougth;
+	public int levelToOpen;
 
 	void Start(){
+		PlayerPrefs.DeleteAll ();
+		PlayerPrefs.Save ();
 		if (PlayerPrefs.GetString (weaponName) == "bought") {
 			isBougth = true;
 		}
