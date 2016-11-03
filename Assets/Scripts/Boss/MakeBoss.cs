@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor;
+//using UnityEditor;
 public class MakeBoss {
 
-	[MenuItem("Assets/Create/Boss Object")]
+	/*[MenuItem("Assets/Create/Boss Object")]
 	public static void Create()
 	{
 		BossObject asset = ScriptableObject.CreateInstance<BossObject> ();
@@ -11,6 +11,6 @@ public class MakeBoss {
 		AssetDatabase.SaveAssets ();
 		EditorUtility.FocusProjectWindow ();
 		Selection.activeObject = asset;
-	}
+	}*/
 
 }

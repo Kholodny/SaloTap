@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace CompleteProject
 {
@@ -57,16 +58,27 @@ namespace CompleteProject
 
 		public void OnClick()
 		{ 
-
-			profile.currentBoss = bossNumber;
-			boss.HealphPoint = boss.maxHP = profile.bosses [bossNumber].HP;
-			boss.MaxTimer = profile.bosses [bossNumber].timeToKill_seconds;
-			boss.hpSlider.maxValue = boss.HealphPoint;
-			boss.TimerSlider.maxValue = boss.MaxTimer;
-			boss.wonGold = profile.bosses [bossNumber].goldPerKill;
-			boss.wonXP = profile.bosses [bossNumber].XPperKill;
-			boss.GetComponent<Image> ().sprite = profile.bosses [bossNumber].itemImage;
 			ChooseBoss ();
+			profile.currentBoss = bossNumber;
+
+			boss.HealphPoint = boss.maxHP = profile.bosses [bossNumber].HP;
+		
+
+			boss.MaxTimer = profile.bosses [bossNumber].timeToKill_seconds;
+
+			boss.hpSlider.maxValue = boss.HealphPoint;
+
+			boss.TimerSlider.maxValue = boss.MaxTimer;
+
+			boss.wonGold = profile.bosses [bossNumber].goldPerKill;
+
+			boss.wonXP = profile.bosses [bossNumber].XPperKill;
+
+			boss.GetComponent<Image> ().sprite = profile.bosses [bossNumber].itemImage;
+
+			boss.thisBoss = bossNumber;
+
+
 
 		}
 

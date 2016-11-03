@@ -40,6 +40,7 @@ public class PlayerProfile : MonoBehaviour {
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
 		LoadGame ();
+
 	}
 
 

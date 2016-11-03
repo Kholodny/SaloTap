@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour {
 
@@ -26,6 +27,7 @@ public class Boss : MonoBehaviour {
 
 
 	public GameObject losePanel, winPanel;
+	public Text priseText;
 
 	// Use this for initialization
 	void Start () {
@@ -36,18 +38,22 @@ public class Boss : MonoBehaviour {
 		hpSlider.maxValue = HealphPoint;
 		TimerSlider.maxValue = Timer;*/
 	//	spriteOfBoss = player.bosses [thisBoss].itemImage;
-		HealphPoint = maxHP = player.bosses [thisBoss].HP;
-		MaxTimer = player.bosses [thisBoss].timeToKill_seconds;
-		hpSlider.maxValue = HealphPoint;
-		TimerSlider.maxValue = MaxTimer;
-
-
+	
+		//HealphPoint = maxHP = player.bosses [thisBoss].HP;
+		//MaxTimer = player.bosses [thisBoss].timeToKill_seconds;
+		//hpSlider.maxValue = HealphPoint;
+		//TimerSlider.maxValue = MaxTimer;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
-		
+		//Если че, вернуть обратно в старт
+		if (player.bosses [thisBoss].isKilled == true) {
+			wonGold = 1;
+			wonXP = 15;
+		}
+
+		//----
 
 
 		hpSlider.value = HealphPoint;
@@ -68,6 +74,7 @@ public class Boss : MonoBehaviour {
 			}
 			if(HealphPoint <=0 && Timer > 0){
 				HealphPoint = 0;
+				player.bosses [thisBoss].isKilled = true;
 				print("win");
 				OpenWinPanel ();
 			}
@@ -103,6 +110,7 @@ public class Boss : MonoBehaviour {
 
 	void OpenWinPanel(){
 		Time.timeScale = 0;
+		priseText.text = "+Coins: " + wonGold + "\n+XP: " + wonXP;
 		boss.SetActive (false);
 		winPanel.SetActive (true);
 	}
@@ -125,7 +133,7 @@ public class Boss : MonoBehaviour {
 		losePanel.SetActive (false);
 		bossCanvas.SetActive (false);
 		mainCanvas.SetActive (true);
-		Application.LoadLevel ("gameScene");
+		SceneManager.LoadScene("gameScene");
 	}
 
 	public void StartFight(){
@@ -141,7 +149,7 @@ public class Boss : MonoBehaviour {
 		Time.timeScale = 1;
 		bossCanvas.SetActive (false);
 		mainCanvas.SetActive (true);
-		Application.LoadLevel ("gameScene");
+		SceneManager.LoadScene("gameScene");
 	}
 		
 }

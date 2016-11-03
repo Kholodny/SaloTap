@@ -26,7 +26,8 @@ public class Click : MonoBehaviour {
 		profile.score += profile.ptsPerClick;
 		profile.xp = profile.xp + profile.plusXP;
 		profile.LevelUp ();
-
+		transform.localScale = new Vector3 (0.9f, 0.9f, 0.9f);
+		transform.localScale = new Vector3 (1f, 1f, 1f);
 	}
 
 	void ShowStats(){
