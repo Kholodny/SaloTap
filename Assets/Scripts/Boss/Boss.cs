@@ -121,9 +121,11 @@ public class Boss : MonoBehaviour {
 
 	public void NotAgain(){
 		Time.timeScale = 1;
+		Timer = 1f;
 		losePanel.SetActive (false);
 		bossCanvas.SetActive (false);
 		mainCanvas.SetActive (true);
+		Application.LoadLevel ("gameScene");
 	}
 
 	public void StartFight(){
@@ -135,10 +137,11 @@ public class Boss : MonoBehaviour {
 	public void GetYourPrise(){
 		player.Coins += wonGold;
 		player.xp += wonXP;
-
+		HealphPoint = 1;
 		Time.timeScale = 1;
 		bossCanvas.SetActive (false);
 		mainCanvas.SetActive (true);
+		Application.LoadLevel ("gameScene");
 	}
 		
 }
