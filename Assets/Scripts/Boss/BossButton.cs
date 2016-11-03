@@ -57,38 +57,15 @@ namespace CompleteProject
 
 		public void OnClick()
 		{ 
-			/*if (profile.bosses [bossNumber].isKilled == false && profile.levelDisplay >= profile.bosses[bossNumber].levelToOpen) {
 
-				//profile.Coins -= profile.weapons [bossNumber].cost;
-				profile.currentBoss = bossNumber;
-				profile.bosses[bossNumber].isKilled = true;
-				boss.HealphPoint = profile.bosses [bossNumber].HP;
-				boss.Timer = profile.bosses [bossNumber].timeToKill_seconds;
-
-			} else if (profile.bosses [bossNumber].isKilled == true) {
-				profile.currentBoss = bossNumber;
-				time.text = "ээ блэт тудох";
-			} else if (profile.levelDisplay < profile.bosses[bossNumber].levelToOpen) {
-				print ("Уровень мал!");
-			} */
-
-			/*profile.currentBoss = bossNumber;
-			profile.bosses[bossNumber].isKilled = true;
-			boss.HealphPoint = profile.bosses [bossNumber].HP;
-			boss.Timer = profile.bosses [bossNumber].timeToKill_seconds;*/
 			profile.currentBoss = bossNumber;
 			boss.HealphPoint = boss.maxHP = profile.bosses [bossNumber].HP;
 			boss.MaxTimer = profile.bosses [bossNumber].timeToKill_seconds;
 			boss.hpSlider.maxValue = boss.HealphPoint;
 			boss.TimerSlider.maxValue = boss.MaxTimer;
-			//boss.maxHP = profile.bosses [bossNumber].HP;
-			//boss.MaxTimer = profile.bosses [bossNumber].timeToKill_seconds;
-			/*
-			 *  HealphPoint = maxHP = player.bosses [thisBoss].HP;
-				MaxTimer = player.bosses [thisBoss].timeToKill_seconds;
-				hpSlider.maxValue = HealphPoint;
-				TimerSlider.maxValue = MaxTimer;
-			 */ 
+			boss.wonGold = profile.bosses [bossNumber].goldPerKill;
+			boss.wonXP = profile.bosses [bossNumber].XPperKill;
+			boss.GetComponent<Image> ().sprite = profile.bosses [bossNumber].itemImage;
 			ChooseBoss ();
 
 		}

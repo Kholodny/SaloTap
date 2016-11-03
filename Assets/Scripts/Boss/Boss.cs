@@ -19,8 +19,13 @@ public class Boss : MonoBehaviour {
 	public GameObject mainCanvas, bossCanvas, boss, preGamePanel, readyPanel;
 	public int thisBoss;
 
+	//Winner's Prises
+	public int wonGold;
+	public float wonXP;
+	public Sprite spriteOfBoss;
 
-	public GameObject losePanel;
+
+	public GameObject losePanel, winPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +35,7 @@ public class Boss : MonoBehaviour {
 		MaxTimer = Timer;
 		hpSlider.maxValue = HealphPoint;
 		TimerSlider.maxValue = Timer;*/
+	//	spriteOfBoss = player.bosses [thisBoss].itemImage;
 		HealphPoint = maxHP = player.bosses [thisBoss].HP;
 		MaxTimer = player.bosses [thisBoss].timeToKill_seconds;
 		hpSlider.maxValue = HealphPoint;
@@ -59,6 +65,11 @@ public class Boss : MonoBehaviour {
 			if (Timer <= 0) {
 				print ("Проиграл!");
 				OpenLosePanel ();
+			}
+			if(HealphPoint <=0 && Timer > 0){
+				HealphPoint = 0;
+				print("win");
+				OpenWinPanel ();
 			}
 		}
 	}
@@ -90,6 +101,12 @@ public class Boss : MonoBehaviour {
 		losePanel.SetActive (true);
 	}
 
+	void OpenWinPanel(){
+		Time.timeScale = 0;
+		boss.SetActive (false);
+		winPanel.SetActive (true);
+	}
+
 
 	public void TryAgain(){
 		HealphPoint = maxHP;
@@ -113,6 +130,15 @@ public class Boss : MonoBehaviour {
 		preGamePanel.SetActive (false);
 		HealphPoint = maxHP;
 		Timer = MaxTimer;
+	}
+
+	public void GetYourPrise(){
+		player.Coins += wonGold;
+		player.xp += wonXP;
+
+		Time.timeScale = 1;
+		bossCanvas.SetActive (false);
+		mainCanvas.SetActive (true);
 	}
 		
 }

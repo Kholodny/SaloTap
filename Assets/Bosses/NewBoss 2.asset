@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b7f7b16a84c6888408b986c29f2ea73c, type: 3}
-  m_Name: NewBoss
+  m_Name: NewBoss 2
   m_EditorClassIdentifier: 
-  bossName: "\u0411\u043E\u0441\u0441 1"
-  HP: 300
-  description: "300 \u0445\u043F, 25 \u0441\u0435\u043A, \u0434\u0435\u0440\u0437\u0430\u0439!"
-  itemImage: {fileID: 21300000, guid: b5cf979ed8ed39145866cc72147434b9, type: 3}
+  bossName: "\u0421\u043B\u043E\u0436\u043D\u044B\u0439 \u0431\u043E\u0441\u0441"
+  HP: 1000
+  description: "\u041D\u0443, \u0433\u043E \u0441\u043A\u0430)"
+  itemImage: {fileID: 21300000, guid: fc11a2f6eec852e4dab8db83b365e842, type: 3}
   timeToKill_seconds: 25
   isKilled: 0
-  levelToOpen: 0
-  goldPerKill: 100
-  XPperKill: 1500
+  levelToOpen: 1
+  goldPerKill: 500
+  XPperKill: 25000

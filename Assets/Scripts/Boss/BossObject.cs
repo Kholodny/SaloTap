@@ -12,6 +12,8 @@ public class BossObject : ScriptableObject {
 	public float timeToKill_seconds = 25;
 	public bool isKilled;
 	public int levelToOpen;
+	public int goldPerKill;
+	public float XPperKill;
 
 	void Start(){
 		PlayerPrefs.DeleteAll ();

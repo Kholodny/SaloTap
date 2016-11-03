@@ -11,10 +11,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f7b16a84c6888408b986c29f2ea73c, type: 3}
   m_Name: NewBoss 1
   m_EditorClassIdentifier: 
-  bossName: PizdaEblan1
+  bossName: "\u0411\u043E\u0441\u0441 2"
   HP: 500
-  description: "\u0423\u0431\u0435\u0439 \u0435\u0433\u043E \u043D\u0430\u0445\u0443\u0443\u0443\u0443\u0443\u0439"
-  itemImage: {fileID: 0}
+  description: "500 \u0445\u043F, 30 \u0441\u0435\u043A, \u0443\u0431\u0438\u0432\u0430\u0439\u0442\u0435"
+  itemImage: {fileID: 21300000, guid: f70696794db12cd4c9d1cb4c8430eb19, type: 3}
   timeToKill_seconds: 30
   isKilled: 0
   levelToOpen: 1
+  goldPerKill: 322
+  XPperKill: 12421

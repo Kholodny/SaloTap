@@ -1,10 +1,26 @@
 fileFormatVersion: 2
 guid: e819c8b0eb857a946bf7652a54420dc1
-timeCreated: 1477823534
+timeCreated: 1478102459
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hpText: {instanceID: 0}
+  - readyText: {instanceID: 0}
+  - hpSlider: {instanceID: 0}
+  - TimerSlider: {instanceID: 0}
+  - mainCanvas: {fileID: 1000012578304796, guid: 7ef84363854a3db4fbbc2aa7879df63c,
+      type: 2}
+  - bossCanvas: {fileID: 1000014223519398, guid: f4ca614a8e03aa84e95e8437412dd87e,
+      type: 2}
+  - boss: {fileID: 1000013844251960, guid: 793bfc6d28ae27a469870d54506d24a2, type: 2}
+  - preGamePanel: {fileID: 1000013265450756, guid: ca8c7a8416db10144b4ccc6fae45921c,
+      type: 2}
+  - readyPanel: {fileID: 1000012743211170, guid: 68057df69d44048489fd646fa4b53ad3,
+      type: 2}
+  - losePanel: {fileID: 1000014158702690, guid: 9d1ba51d211fcac4693e305747ee2fde,
+      type: 2}
+  - winPanel: {fileID: 1000011423329534, guid: dc0b6be54712418439ec3856e51e8431, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

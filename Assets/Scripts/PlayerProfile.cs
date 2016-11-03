@@ -34,6 +34,7 @@ public class PlayerProfile : MonoBehaviour {
 	public float plusXP = 1;
 	public  int Coins = 0;
 	public  int Gold = 0;
+	public Text coinsText;
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
@@ -44,6 +45,7 @@ public class PlayerProfile : MonoBehaviour {
 
 
 	void Update(){
+		coinsText.text = "Coins: " + Coins;
 		ptsPerClick = weapons [currentWeapon].damage;
 		weaponImage.sprite = weapons [currentWeapon].itemImage;
 		SaveGame ();
