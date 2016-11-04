@@ -14,7 +14,7 @@ MonoBehaviour:
   weaponName: Vilka lvl 11
   cost: 1000
   description: Damage 400
-  itemImage: {fileID: 21300000, guid: 8c1c743eb08073f4d97404092e95905c, type: 3}
+  itemImage: {fileID: 21300000, guid: b8920e689ecd9564b891ea82b9b09589, type: 3}
   damage: 400
   isBougth: 0
   levelToOpen: 3

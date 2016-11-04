@@ -12,6 +12,7 @@ namespace CompleteProject
 		public Text name;
 		public Text cost;
 		public Text description;
+		public Image btImg;
 		//public Sprite btImage;
 
 		/*
@@ -26,6 +27,7 @@ namespace CompleteProject
 		// Use this for initialization
 		void Start () 
 		{
+			btImg.sprite = profile.weapons [weaponNumber].itemImage;
 			SetButton ();
 			if(weaponNumber == profile.currentWeapon){
 				description.text = "Selected";
@@ -53,7 +55,7 @@ namespace CompleteProject
 			} else if (profile.weapons [weaponNumber].isBougth == true) {
 				name.text = profile.weapons [weaponNumber].name;
 				cost.text = "Куплен";
-				description.text = "";
+				description.text = profile.weapons [weaponNumber].description;
 			} else {
 				name.text = profile.weapons [weaponNumber].name;
 				cost.text = "$" + profile.weapons [weaponNumber].cost;

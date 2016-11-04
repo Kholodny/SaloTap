@@ -8,6 +8,7 @@ public class Buttons : MonoBehaviour {
 	public string action;
 	public GameObject menuOverlay;
 	public string bossName;
+	public Button gameButton;
 
 
 	void OnMouseDown(){

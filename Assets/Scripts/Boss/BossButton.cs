@@ -16,6 +16,7 @@ namespace CompleteProject
 		public Text description;
 		private Button bt;
 		public Boss boss;
+		public Image btnImg;
 		//public Sprite btImage;
 
 		/*
@@ -30,7 +31,7 @@ namespace CompleteProject
 		// Use this for initialization
 		void Start () 
 		{
-			//boss = FindObjectOfType<Boss> ();
+			btnImg.sprite = profile.bosses [bossNumber].itemImage;
 			bt = GetComponent<Button> ();
 			SetButton ();
 			if(bossNumber == profile.currentWeapon){
@@ -50,8 +51,8 @@ namespace CompleteProject
 		void SetButton()
 		{
 			name.text = profile.bosses [bossNumber].bossName;
-			description.text = profile.bosses [bossNumber].description;
 			time.text = profile.bosses [bossNumber].description;
+			description.text = "Opens in " + profile.bosses [bossNumber].levelToOpen + " lvl.";
 
 			//Здесь добавить условие, при котором если предмет куплен, то будет выводиться только его левел и урон, без цены
 		}

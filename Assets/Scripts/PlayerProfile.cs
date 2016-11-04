@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
 public class PlayerProfile : MonoBehaviour {
 
 	public Text gpc;
@@ -19,7 +18,7 @@ public class PlayerProfile : MonoBehaviour {
 
 	public WeaponObject[] weapons;
 	public int currentWeapon;
-	public Image weaponImage;
+	public Image[] weaponImage;
 
 	//Bosses
 
@@ -35,20 +34,25 @@ public class PlayerProfile : MonoBehaviour {
 	public  int Coins = 0;
 	public  int Gold = 0;
 	public Text coinsText;
+	public Text goldText;
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
 		LoadGame ();
-
 	}
 
 
 
 	void Update(){
+		
 		coinsText.text = "Coins: " + Coins;
 		ptsPerClick = weapons [currentWeapon].damage;
-		weaponImage.sprite = weapons [currentWeapon].itemImage;
+
+		//Установка изображений на оружие 
+		for (int i = 0; i < weaponImage.Length; i++) {
+			weaponImage[i].sprite = weapons [currentWeapon].itemImage;
+		}
 		SaveGame ();
 	}
 
