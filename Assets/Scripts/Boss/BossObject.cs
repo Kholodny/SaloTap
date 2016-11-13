@@ -14,13 +14,16 @@ public class BossObject : ScriptableObject {
 	public int levelToOpen;
 	public int goldPerKill;
 	public float XPperKill;
+	public string bossPrefix;
 
 	void Start(){
-		PlayerPrefs.DeleteAll ();
-		PlayerPrefs.Save ();
 		if (PlayerPrefs.GetString (bossName) == "killed") {
 			isKilled = true;
 		}
+		if (isKilled == true) {
+			PlayerPrefs.SetString (bossName, "killed");
+		}
+
 	}
 
 	void Update(){

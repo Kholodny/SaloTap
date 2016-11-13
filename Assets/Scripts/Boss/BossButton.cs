@@ -18,6 +18,7 @@ namespace CompleteProject
 		public Boss boss;
 		public Image btnImg;
 		//public Sprite btImage;
+		private string bossKillStatus;
 
 		/*
 		 * Добавить меню выбора предметов, куда перекидываются предметы и их там можно выбирать, а в магазине кнопку делать неактивной 
@@ -31,6 +32,9 @@ namespace CompleteProject
 		// Use this for initialization
 		void Start () 
 		{
+			bossKillStatus = PlayerPrefs.GetString (profile.bosses [bossNumber].bossPrefix);
+		
+
 			btnImg.sprite = profile.bosses [bossNumber].itemImage;
 			bt = GetComponent<Button> ();
 			SetButton ();
@@ -41,8 +45,10 @@ namespace CompleteProject
 
 		void Update(){
 			SetButton ();
-			if(profile.levelDisplay < profile.bosses[bossNumber].levelToOpen){
+			if (profile.levelDisplay < profile.bosses [bossNumber].levelToOpen) {
 				bt.interactable = false;
+			} else {
+				bt.interactable = true;
 			}
 
 
@@ -51,8 +57,17 @@ namespace CompleteProject
 		void SetButton()
 		{
 			name.text = profile.bosses [bossNumber].bossName;
-			time.text = profile.bosses [bossNumber].description;
+			//time.text = profile.bosses [bossNumber].description;
+			time.text = "HP: " + profile.bosses [bossNumber].HP + "\nTime: " + profile.bosses [bossNumber].timeToKill_seconds + " sec";
 			description.text = "Opens in " + profile.bosses [bossNumber].levelToOpen + " lvl.";
+			if (bossKillStatus == "killed" || profile.bosses [bossNumber].isKilled == true) {
+				name.text = profile.bosses [bossNumber].bossName + "\nkilled";
+			}
+			if (profile.bosses [bossNumber].levelToOpen <= profile.levelDisplay) {
+				description.text = "Open";
+			} else {
+				description.text = "Opens in " + profile.bosses [bossNumber].levelToOpen + " lvl.";
+			}
 
 			//Здесь добавить условие, при котором если предмет куплен, то будет выводиться только его левел и урон, без цены
 		}
@@ -64,6 +79,7 @@ namespace CompleteProject
 
 			boss.HealphPoint = boss.maxHP = profile.bosses [bossNumber].HP;
 		
+			boss.bossName = profile.bosses [bossNumber].bossPrefix;
 
 			boss.MaxTimer = profile.bosses [bossNumber].timeToKill_seconds;
 

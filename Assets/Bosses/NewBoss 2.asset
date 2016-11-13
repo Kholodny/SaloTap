@@ -11,12 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f7b16a84c6888408b986c29f2ea73c, type: 3}
   m_Name: NewBoss 2
   m_EditorClassIdentifier: 
-  bossName: "\u0421\u043B\u043E\u0436\u043D\u044B\u0439 \u0431\u043E\u0441\u0441"
-  HP: 1000
+  bossName: Chees
+  HP: 5000
   description: 1000 HP, 10 sec!
   itemImage: {fileID: 21300000, guid: fc11a2f6eec852e4dab8db83b365e842, type: 3}
-  timeToKill_seconds: 10
+  timeToKill_seconds: 25
   isKilled: 0
-  levelToOpen: 1
-  goldPerKill: 500
-  XPperKill: 25000
+  levelToOpen: 10
+  goldPerKill: 1000
+  XPperKill: 53000
+  bossPrefix: boss3

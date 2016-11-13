@@ -10,7 +10,7 @@ public class Boss : MonoBehaviour {
 	public Text hpText;
 	public Text readyText;
 
-	private PlayerProfile player;
+	public PlayerProfile player;
 
 	public Slider hpSlider;
 	public Slider TimerSlider;
@@ -29,10 +29,25 @@ public class Boss : MonoBehaviour {
 	public GameObject losePanel, winPanel;
 	public Text priseText;
 	public Text timerText;
+
+	public AudioClip punchClip, backGroundMusic;
+
+	public string bossName;
+	private string killStatus;
 	// Use this for initialization
 	void Start () {
+		gameObject.GetComponent<AudioSource> ().clip = punchClip;
+
 		Time.timeScale = 1;
 		player = FindObjectOfType<PlayerProfile> ();
+
+		killStatus = PlayerPrefs.GetString (bossName);
+		if (killStatus == "killed") {
+			player.bosses [thisBoss].isKilled = true;
+		} else {
+			player.bosses [thisBoss].isKilled = false;
+		}
+		print ((player.bosses [thisBoss].isKilled).ToString());
 		/*maxHP = HealphPoint;
 		MaxTimer = Timer;
 		hpSlider.maxValue = HealphPoint;
@@ -62,22 +77,21 @@ public class Boss : MonoBehaviour {
 		TimerSlider.value = Timer;
 		if (preGamePanel.activeSelf == true) {
 			Time.timeScale = 0;
-			
-			print ("pause");
 		} else {
 			Time.timeScale = 1;
-			print ("figth");
 			StartCoroutine (TimerGo ());
 			TimerSlider.value = Timer;
 			hpText.text = maxHP + " / " + HealphPoint;
 			if (Timer <= 0) {
-				print ("Проиграл!");
+				PlayerPrefs.SetString (bossName, "notKilled");
+				PlayerPrefs.Save ();
 				OpenLosePanel ();
 			}
 			if(HealphPoint <=0 && Timer > 0){
 				HealphPoint = 0;
 				player.bosses [thisBoss].isKilled = true;
-				print("win");
+				PlayerPrefs.SetString (bossName, "killed");
+				PlayerPrefs.Save ();
 				OpenWinPanel ();
 			}
 		}
@@ -93,7 +107,9 @@ public class Boss : MonoBehaviour {
 	}
 
 	public void GetDamage(){
+		gameObject.GetComponent<AudioSource> ().Play ();
 		HealphPoint -= player.ptsPerClick;
+
 		print (HealphPoint);
 	}
 
@@ -153,5 +169,10 @@ public class Boss : MonoBehaviour {
 		mainCanvas.SetActive (true);
 		SceneManager.LoadScene("gameScene");
 	}
+
+	public void StartBattleSound(){
+		
+	}
+		
 		
 }

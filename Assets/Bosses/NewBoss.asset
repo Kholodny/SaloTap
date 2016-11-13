@@ -11,12 +11,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f7b16a84c6888408b986c29f2ea73c, type: 3}
   m_Name: NewBoss
   m_EditorClassIdentifier: 
-  bossName: "\u0411\u043E\u0441\u0441 1"
+  bossName: Bacon
   HP: 300
   description: 300 HP, 25 sec
-  itemImage: {fileID: 21300000, guid: b5cf979ed8ed39145866cc72147434b9, type: 3}
-  timeToKill_seconds: 25
-  isKilled: 1
-  levelToOpen: 0
-  goldPerKill: 100
-  XPperKill: 1500
+  itemImage: {fileID: 21300000, guid: d4121b389031add4687d09d540dab146, type: 3}
+  timeToKill_seconds: 20
+  isKilled: 0
+  levelToOpen: 2
+  goldPerKill: 55
+  XPperKill: 2750
+  bossPrefix: boss1

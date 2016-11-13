@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 public class InGameShop : MonoBehaviour {
 
 	public GameObject ShopPanel;
-	public GameObject gameProcess;
 	public GameObject inventoryPanel;
 
 	public GameObject shp_page1;
@@ -19,12 +18,11 @@ public class InGameShop : MonoBehaviour {
 
 	public void OpenShop(){
 		ShopPanel.SetActive (true);
-		gameProcess.SetActive (false);
+
 	}
 
 	public void CloseShop(){
 		ShopPanel.SetActive (false);
-		gameProcess.SetActive (true);
 	}
 
 
@@ -43,12 +41,11 @@ public class InGameShop : MonoBehaviour {
 
 	public void OpenBossesPanel(){
 		bosses_Panel.SetActive (true);
-		gameProcess.SetActive (false);
+
 	}
 
 	public void CloseBossesPanel(){
 		bosses_Panel.SetActive (false);
-		gameProcess.SetActive (true);
 	}
 
 	public void ChooseBoss(){

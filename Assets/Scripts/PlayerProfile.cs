@@ -1,15 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Xml.Serialization;//подключаем using для работы с XmlSerializer
+using System.IO;//подключаем using для записи файлов
+using System.Xml;
+
+[System.Serializable]
 public class PlayerProfile : MonoBehaviour {
+
+	public static PlayerProfile Instanse{ get; set; }
 
 	public Text gpc;
 	public Text scoreDisplay;
-	public float score = 0.00f;
+	public GoldPerSec gps;
+
+	//public float score = 0.00f;
+	public long score = 0;
 	public int ptsPerClick = 1;
+
 	public Slider levelSlider;
+
 	public int levelDisplay = 1;
+
 	public float xp = 0.00f;
+
 	public Color affordable;
 	public Color standard;
 	public Text levelSet;
@@ -26,15 +40,31 @@ public class PlayerProfile : MonoBehaviour {
 	public int currentBoss;
 	public Image bossImage;
 
+	//Boosts
+	public BoostObject[] boosts;
+	public int currentBoost;
+	public Image boostImage;
+
 	//test
 	public Text xpShow;
 	public float xpToLvlup;
 	public Text xpLvlShow;
 	public float plusXP = 1;
-	public  int Coins = 0;
-	public  int Gold = 0;
+	public  int Coins = 100;
+	public  int Gold = 100;
 	public Text coinsText;
 	public Text goldText;
+
+	public Text coinsTextShp;
+	public Text goldTextShp;
+
+	string saveScoreToString;
+
+	public int boostScore = 0;
+	//public float boostXP;
+
+
+
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
@@ -42,81 +72,86 @@ public class PlayerProfile : MonoBehaviour {
 		LoadGame ();
 	}
 
+	void Start(){
+		StartCoroutine (Booster (0.30f));
+		print (boostScore);
+	}
+
 
 
 	void Update(){
-		
+		LevelUp ();
+
+		coinsTextShp.text = Coins.ToString ();
+		goldTextShp.text = Gold.ToString ();
+		/*if (weapons [currentWeapon].isBougth == false) {
+			currentWeapon = 0;
+		}*/
+
 		coinsText.text = "Coins: " + Coins;
+
 		ptsPerClick = weapons [currentWeapon].damage;
+
+		levelSlider.maxValue = xpToLvlup;
+		levelSlider.value = xp;
 
 		//Установка изображений на оружие 
 		for (int i = 0; i < weaponImage.Length; i++) {
 			weaponImage[i].sprite = weapons [currentWeapon].itemImage;
 		}
 		SaveGame ();
+
 	}
 
 	void SaveGame(){
-		PlayerPrefs.SetFloat ("XPtoLVL", xpToLvlup);
-		PlayerPrefs.SetFloat ("Score", score);
-		PlayerPrefs.SetInt ("Level", levelDisplay);
+		PlayerPrefs.SetFloat ("XPtoLVL", xpToLvlup); 
+		PlayerPrefs.SetString ("Score_Str", score.ToString());
+		PlayerPrefs.SetInt ("Level", levelDisplay); 
 		PlayerPrefs.SetInt ("Coins", Coins);
+		PlayerPrefs.SetInt ("Gold", Gold);
 		PlayerPrefs.SetInt ("Damage", ptsPerClick);
 		PlayerPrefs.SetFloat ("XP", xp);
 		PlayerPrefs.SetInt ("WeaponSelected", currentWeapon);
+		PlayerPrefs.SetInt ("Booster", boostScore);
 		//PlayerPrefs.SetFloat ("XPBoost", plusXP);
 		PlayerPrefs.Save ();
 	}
 
 	void LoadGame(){
+
 		xp = PlayerPrefs.GetFloat ("XP");
 		currentWeapon = PlayerPrefs.GetInt ("WeaponSelected");
-		score = PlayerPrefs.GetFloat ("Score");
+		//score = long.Parse(PlayerPrefs.GetString ("Score1"));
+		saveScoreToString = PlayerPrefs.GetString("Score_Str");
+
+		if (PlayerPrefs.HasKey ("Score_Str")) 
+			score = long.Parse (saveScoreToString);
+
+		 else 
+			score = 0;
+
+		boostScore = PlayerPrefs.GetInt ("Booster");
+
 		levelDisplay = PlayerPrefs.GetInt ("Level");
 		levelSlider.value = PlayerPrefs.GetFloat ("XP");
 		ptsPerClick = PlayerPrefs.GetInt ("Damage");
 		levelSlider.maxValue = PlayerPrefs.GetFloat ("XPtoLVL");
 		xpToLvlup = PlayerPrefs.GetFloat ("XPtoLVL");
 		Coins = PlayerPrefs.GetInt ("Coins");
+		Gold = PlayerPrefs.GetInt ("Gold");
 		//plusXP = PlayerPrefs.GetFloat ("XPBoost");
-
 	}
 
-
-	//Getters/Setters
-	//-------------SCORE------------//
-	public float getScore(){
-		return score;
+	private IEnumerator Booster(float waitTime){
+		//float bosstXP = 0;
+		while (true) {
+			yield return new WaitForSeconds (waitTime);
+			//bosstXP = (float)(boostScore/100);
+			score = score + boostScore;
+			//xp += boostXP;
+		}
 	}
-	public void setScore(float _score){
-		this.score = _score;
-	}//--------SCORE----------//
-
-	//_------ POINTS PER CLICK-----------
-	public int getPtsPerClick(){
-		return ptsPerClick;
-	}
-	public void setPtsPerClick(int _pts){
-		this.ptsPerClick = _pts;
-	}//--------PTS PER CLICK -------------
-
-	//---------XP------------------//
-	public float getXP(){
-		return xp;
-	}
-	public void setXP(float _xp){
-		this.xp = _xp;
-	}//-----------XP--------------//
-
-	//------LEVEL DISPLAY-----//
-	public int getLevelDisplay(){
-		return levelDisplay;
-	}
-	public void setLevelDisplay(int _level){
-		this.levelDisplay = _level;
-	}//----------LEVEL DISPLAY------
 	 
-	//END OF GETTERS AND SETTERS---------------------//
 
 	public void LevelUp(){
 		
@@ -136,13 +171,6 @@ public class PlayerProfile : MonoBehaviour {
 		} else {
 			levelSlider.value = 0;
 		}//Конец реализации ползунка опыта
-
-
-		/*while (xp < levelSlider.maxValue) {
-			Debug.Log ("Test");
-		}*/
-		/*while (xp <= levelSlider.maxValue) {
-			levelSlider.value = levelSlider.value + xp;
-		}//Конец реализации ползунка опыта*/
 	}
+	
 }

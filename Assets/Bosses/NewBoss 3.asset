@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f7b16a84c6888408b986c29f2ea73c, type: 3}
+  m_Name: NewBoss 3
+  m_EditorClassIdentifier: 
+  bossName: Steak
+  HP: 9000
+  description: 1000 HP, 10 sec!
+  itemImage: {fileID: 21300000, guid: 01d9705e80d517546a4b0533e8957f65, type: 3}
+  timeToKill_seconds: 45
+  isKilled: 0
+  levelToOpen: 15
+  goldPerKill: 1100
+  XPperKill: 100000
+  bossPrefix: boss3

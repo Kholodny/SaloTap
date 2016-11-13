@@ -1,0 +1,666 @@
+fileFormatVersion: 2
+guid: 03275086ec3685d449babc38d340f19e
+timeCreated: 1478949847
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: forks_2048_cpy_0
+    21300002: forks_2048_cpy_1
+    21300004: forks_2048_cpy_2
+    21300006: forks_2048_cpy_3
+    21300008: forks_2048_cpy_4
+    21300010: forks_2048_cpy_5
+    21300012: forks_2048_cpy_6
+    21300014: forks_2048_cpy_7
+    21300016: forks_2048_cpy_8
+    21300018: forks_2048_cpy_9
+    21300020: forks_2048_cpy_10
+    21300022: forks_2048_cpy_11
+    21300024: forks_2048_cpy_12
+    21300026: forks_2048_cpy_13
+    21300028: forks_2048_cpy_14
+    21300030: forks_2048_cpy_15
+    21300032: forks_2048_cpy_16
+    21300034: forks_2048_cpy_17
+    21300036: forks_2048_cpy_18
+    21300038: forks_2048_cpy_19
+    21300040: forks_2048_cpy_20
+    21300042: forks_2048_cpy_21
+    21300044: forks_2048_cpy_22
+    21300046: forks_2048_cpy_23
+    21300048: forks_2048_cpy_24
+    21300050: forks_2048_cpy_25
+    21300052: forks_2048_cpy_26
+    21300054: forks_2048_cpy_27
+    21300056: forks_2048_cpy_28
+    21300058: forks_2048_cpy_29
+    21300060: forks_2048_cpy_30
+    21300062: forks_2048_cpy_31
+    21300064: forks_2048_cpy_32
+    21300066: forks_2048_cpy_33
+    21300068: forks_2048_cpy_34
+    21300070: forks_2048_cpy_35
+    21300072: forks_2048_cpy_36
+    21300074: forks_2048_cpy_37
+    21300076: forks_2048_cpy_38
+    21300078: forks_2048_cpy_39
+    21300080: forks_2048_cpy_40
+    21300082: forks_2048_cpy_41
+    21300084: forks_2048_cpy_42
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: forks_2048_cpy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_3
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_4
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_5
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_6
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1755
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_8
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_9
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_10
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_11
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_12
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_13
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1462
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_15
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_16
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_17
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_18
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_19
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_20
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1169
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_22
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_23
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_24
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_25
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_26
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_27
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 876
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_30
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_31
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_32
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_33
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_34
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 583
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_36
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_37
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_38
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_39
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_40
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_41
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 290
+        width: 292
+        height: 293
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: forks_2048_cpy_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 293
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
