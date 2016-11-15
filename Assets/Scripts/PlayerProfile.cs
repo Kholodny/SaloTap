@@ -17,6 +17,7 @@ public class PlayerProfile : MonoBehaviour {
 	//public float score = 0.00f;
 	public long score = 0;
 	public int ptsPerClick = 1;
+	public int defaultPtsPerClick;
 
 	public Slider levelSlider;
 
@@ -49,7 +50,10 @@ public class PlayerProfile : MonoBehaviour {
 	public Text xpShow;
 	public float xpToLvlup;
 	public Text xpLvlShow;
-	public float plusXP = 1;
+	public float plusXP = 5;
+
+	public float DefaultPlusXP;
+
 	public  int Coins = 100;
 	public  int Gold = 100;
 	public Text coinsText;
@@ -63,12 +67,20 @@ public class PlayerProfile : MonoBehaviour {
 	public int boostScore = 0;
 	//public float boostXP;
 
+	//Combos
+
+	private Click click;
 
 
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
+		click =  FindObjectOfType<Click>();
+
+		defaultPtsPerClick = ptsPerClick;
+		DefaultPlusXP = plusXP;
+
 		LoadGame ();
 	}
 
@@ -81,6 +93,7 @@ public class PlayerProfile : MonoBehaviour {
 
 	void Update(){
 		LevelUp ();
+		//ComboClick ();
 
 		coinsTextShp.text = Coins.ToString ();
 		goldTextShp.text = Gold.ToString ();
@@ -171,6 +184,28 @@ public class PlayerProfile : MonoBehaviour {
 		} else {
 			levelSlider.value = 0;
 		}//Конец реализации ползунка опыта
+	}
+
+	/*void ComboClick(){
+		if (click.clickBoost == 2) {
+			ptsPerClick *= 2;
+			plusXP *= 2;
+		} else if (click.clickBoost == 4) {
+			ptsPerClick *= 4;
+			plusXP *= 4;
+		} else if (click.clickBoost == 6) {
+			ptsPerClick *= 6;
+			plusXP *= 6;
+		} else {
+			ptsPerClick = defaultPtsPerClick;
+			plusXP = DefaultPlusXP;
+		}
+	}*/
+
+	private void StartRefreshTimer(float maxTime){
+		if(maxTime > 0){
+			maxTime -= Time.deltaTime;
+		}
 	}
 	
 }

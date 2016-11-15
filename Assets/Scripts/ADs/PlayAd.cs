@@ -4,10 +4,22 @@ using UnityEngine.Advertisements;
 
 public class PlayAd : MonoBehaviour {
 
-	public void ShowAdForPrise(){
-		if (Advertisement.IsReady ()) {
-			Advertisement.Show ("", new ShowOptions(){resultCallback = HandleAdResult});
+	
+	void Start(){
+		if (Advertisement.isSupported) {
+			Advertisement.Initialize ("1200195", false);
+		} else {
+			Debug.Log ("Not supported on your govno!");
 		}
+	}
+
+	public void ShowAdForPrise(){
+		
+		
+		if (Advertisement.IsReady ()) {
+			Advertisement.Show ("rewardedVideo", new ShowOptions (){ resultCallback = HandleAdResult });
+		}
+
 	}
 
 	private void HandleAdResult(ShowResult result){

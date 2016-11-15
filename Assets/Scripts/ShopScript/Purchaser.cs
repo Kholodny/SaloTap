@@ -308,7 +308,7 @@ public class Purchaser : MonoBehaviour, IStoreListener
 			//PlayerProfile.Instanse.Gold += 1500;
 			plr.Gold += 1500;
 		}
-		else if (String.Equals(args.purchasedProduct.definition.id, BUY_15_GOLD, StringComparison.Ordinal))
+		else if (String.Equals(args.purchasedProduct.definition.id, BUY_NO_ADS, StringComparison.Ordinal))
 		{
 			Debug.Log(string.Format("Bought No Ads: '{0}'", args.purchasedProduct.definition.id));
 			Debug.Log ("Ok, will no ads ever");

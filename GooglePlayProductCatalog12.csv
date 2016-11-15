@@ -1,0 +1,7 @@
+Product ID,Published State,Purchase Type,Auto Translate,Locale; Title; Description,Auto Fill Prices,Price,Pricing Template ID
+gold9,published,managed_by_android,false,en_US;Gives you 9 Gold coins;Gives you 9 Gold coins,true,35000000,
+gold15,published,managed_by_android,false,en_US;Gives you 15 Gold coins;Gives you 15 Gold coins,true,85000000,
+gold25,published,managed_by_android,false,en_US;Gives you 25 Gold coins;Gives you 25 Gold coins,true,100000000,
+gold50,published,managed_by_android,false,en_US;Gives you 50 Gold coins;Gives you 50 Gold coins,true,150000000,
+gold100,published,managed_by_android,false,en_US;Gives you 100 Gold coins;Gives you 100 Gold coins,true,210000000,
+gold500,published,managed_by_android,false,en_US;Gives you 500 Gold coins;Gives you 500 Gold coins,true,450000000,
