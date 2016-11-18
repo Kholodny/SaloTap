@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Audio : MonoBehaviour {
-
+	private float anal;
 	/*private Buttons btns;
 
 	void Awake(){
