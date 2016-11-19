@@ -33,9 +33,7 @@ public class Buttons : MonoBehaviour {
 	public void OnMouseUpAsButton(){
 		switch (action) {
 		case "Play":
-			//Application.LoadLevel ("gameScene");
-			SceneManager.LoadScene("gameScene");
-			//Application.OpenURL("http://geyportal.net/uploads/posts/2014-10/1414098012_h11nkd6cij0.jpg");
+                SceneManager.LoadScene("gameScene");
 			break;
 
 		case "ShowMenu":
@@ -43,8 +41,7 @@ public class Buttons : MonoBehaviour {
 			break;
 
 		case "MainMenu":
-			SceneManager.LoadScene ("mainMenu");
-			//Application.LoadLevel ("mainMenu");
+                SceneManager.LoadScene("mainMenu");
 
 			break;
 
