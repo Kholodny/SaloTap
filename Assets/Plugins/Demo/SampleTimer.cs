@@ -86,13 +86,14 @@ public class SampleTimer : MonoBehaviour {
 		GUI.Label (new Rect(0.525f * w, 0.3f * h, 0.4f * w, 0.1f * h), unbiasedFormatted, labelStyle);
 
 		if (GUI.Button (new Rect(0.55f * w, 0.5f * h, 0.35f * w, 0.1f * h), "+60 seconds", btnStyle)) {
-			unbiasedTimerEndTimestamp = unbiasedTimerEndTimestamp.AddSeconds(60);
-			this.WriteTimestamp("unbiasedTimer", unbiasedTimerEndTimestamp);
+            //unbiasedTimerEndTimestamp = unbiasedTimerEndTimestamp.AddSeconds(60);
+            unbiasedTimerEndTimestamp = unbiasedTimerEndTimestamp.AddSeconds(-10);
+            this.WriteTimestamp("unbiasedTimer", unbiasedTimerEndTimestamp);
 		}
 
 		if (GUI.Button (new Rect(0.55f * w, 0.65f * h, 0.35f * w, 0.1f * h), "Reset", btnStyle)) {
 			unbiasedTimerEndTimestamp = UnbiasedTime.Instance.Now().AddSeconds(60);
-			this.WriteTimestamp("unbiasedTimer", unbiasedTimerEndTimestamp);
+            this.WriteTimestamp("unbiasedTimer", unbiasedTimerEndTimestamp);
 		}
 	}
 

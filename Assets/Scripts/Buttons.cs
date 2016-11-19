@@ -65,7 +65,12 @@ public class Buttons : MonoBehaviour {
 			mainCanvas.SetActive (true);
 			SceneManager.LoadScene ("gameScene");
 			break;
+
+		case "DefaultScene":
+			SceneManager.LoadScene ("DefaultScene");
+			break;
 		}
+			
 	}
 
 

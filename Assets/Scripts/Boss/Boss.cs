@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Boss : MonoBehaviour {
 
@@ -34,8 +35,16 @@ public class Boss : MonoBehaviour {
 
 	public string bossName;
 	private string killStatus;
-	// Use this for initialization
-	void Start () {
+    TimeSpan unbiasedRemaining;
+    private TimerColldown timer;
+    // Use this for initialization
+
+    void Awake()  {
+        timer = GetComponent<TimerColldown>();
+        print("Cool: " + unbiasedRemaining);
+    }
+
+    void Start () {
 		gameObject.GetComponent<AudioSource> ().clip = punchClip;
 
 		Time.timeScale = 1;
@@ -62,17 +71,14 @@ public class Boss : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		//Если че, вернуть обратно в старт
-		if (player.bosses [thisBoss].isKilled == true) {
-			wonGold = 1;
-			wonXP = 15;
-		}
-
-		//----
-
+        
+        //Если че, вернуть обратно в старт
+        if (player.bosses [thisBoss].isKilled == true) {
+            wonGold = (int)player.bosses[thisBoss].goldPerKill / 2;
+            wonXP = (float)player.bosses[thisBoss].XPperKill / 2;
+        }
 
 
-		timerText.text = Timer.ToString ("F2");
 		hpSlider.value = HealphPoint;
 		TimerSlider.value = Timer;
 		if (preGamePanel.activeSelf == true) {
@@ -167,12 +173,32 @@ public class Boss : MonoBehaviour {
 		Time.timeScale = 1;
 		bossCanvas.SetActive (false);
 		mainCanvas.SetActive (true);
-		SceneManager.LoadScene("gameScene");
+
+
+        //WriteTimestamp(player.bosses[thisBoss].bossName + "_timer", );
+        player.bosses[thisBoss].coolDownEndTimeStamp = UnbiasedTime.Instance.Now().AddSeconds(player.bosses[thisBoss].cdTimer);
+        player.bosses[thisBoss].WriteTimestamp(player.bosses[thisBoss].bossName + "_timer", player.bosses[thisBoss].coolDownEndTimeStamp);
+        //unbiasedTimerEndTimestamp = UnbiasedTime.Instance.Now().AddSeconds(60);
+        // this.WriteTimestamp("unbiasedTimer", unbiasedTimerEndTimestamp);
+        SceneManager.LoadScene("gameScene");
 	}
 
-	public void StartBattleSound(){
-		
-	}
-		
-		
+    private DateTime ReadTimestamp(string key, DateTime defaultValue)
+    {
+        long tmp = Convert.ToInt64(PlayerPrefs.GetString(key, "0"));
+        if (tmp == 0)
+        {
+            return defaultValue;
+        }
+        return DateTime.FromBinary(tmp);
+    }
+
+    private void WriteTimestamp(string key, DateTime time)
+    {
+        PlayerPrefs.SetString(key, time.ToBinary().ToString());
+    }
+
+
+
+
 }

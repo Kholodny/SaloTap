@@ -21,3 +21,5 @@ MonoBehaviour:
   goldPerKill: 120
   XPperKill: 30000
   bossPrefix: boss2
+  cdTimer: 600
+  cdText: {fileID: 0}

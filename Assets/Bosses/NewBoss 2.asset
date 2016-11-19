@@ -16,8 +16,10 @@ MonoBehaviour:
   description: 1000 HP, 10 sec!
   itemImage: {fileID: 21300000, guid: fc11a2f6eec852e4dab8db83b365e842, type: 3}
   timeToKill_seconds: 25
-  isKilled: 0
+  isKilled: 1
   levelToOpen: 10
   goldPerKill: 1000
   XPperKill: 53000
   bossPrefix: boss3
+  cdTimer: 2100
+  cdText: {fileID: 0}

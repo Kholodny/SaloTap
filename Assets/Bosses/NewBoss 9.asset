@@ -20,4 +20,6 @@ MonoBehaviour:
   levelToOpen: 30
   goldPerKill: 35000
   XPperKill: 420000
-  bossPrefix: boss3
+  bossPrefix: boss10
+  cdTimer: 30000
+  cdText: {fileID: 0}

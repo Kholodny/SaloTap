@@ -18,9 +18,9 @@ public class Click : MonoBehaviour {
 	private int pstToX4 = 75;
 	private int pstToX6 = 125;
 
-	private float timerToX2 = 5f;
-	private float timerToX4 = 2.5f;
-	private float timerToX6 = 1.5f;
+	private float timerToX2 = 0.5f;
+	private float timerToX4 = 0.4f;
+	private float timerToX6 = 0.3f;
 	public GameObject boostAnim;
 	public Text boostText;
 	private RectTransform rec;

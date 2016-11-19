@@ -1,55 +1,20 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using System;
+using UnityEngine.UI;
 
-[System.Serializable]
-public class BossObject : ScriptableObject {
-
-	public string bossName = "Boss Name";
-	public float HP = 300;
-	public string description;
-	public Sprite itemImage;
-	public float timeToKill_seconds = 25;
-	public bool isKilled;
-	public int levelToOpen;
-
-	public int goldPerKill;
-	public float XPperKill;
-
-    public string bossPrefix;
-    public DateTime coolDownTimer;
-    public float cdTimer;
+public class TimerColldown : MonoBehaviour {
 
     public DateTime coolDownEndTimeStamp;
+    public Text cdText;
     TimeSpan unbiasedRemaining;
     private PlayerProfile profile;
     private int bossNumber;
 
-    void Start(){
-		if (PlayerPrefs.GetString (bossName) == "killed") {
-			isKilled = true;
-		}
-		if (isKilled == true) {
-			PlayerPrefs.SetString (bossName, "killed");
-		}
-
-	}
-
-	void Update(){
-		PlayerPrefs.SetString (bossName, "killed");
-		PlayerPrefs.Save ();
-		if (isKilled == true) {
-			Debug.Log ("Убил");
-		}
-	}
-
-
-
-
     void Awake()
     {
-          profile = FindObjectOfType<PlayerProfile>();
+        profile = FindObjectOfType<PlayerProfile>();
+        bossNumber = profile.currentBoss;
+        coolDownEndTimeStamp = this.ReadTimestamp(profile.bosses[bossNumber].bossName + "_timer", UnbiasedTime.Instance.Now().AddSeconds(180));
     }
 
     void OnApplicationPause(bool paused)
@@ -62,7 +27,7 @@ public class BossObject : ScriptableObject {
         else
         {
 
-            coolDownEndTimeStamp = this.ReadTimestamp(profile.bosses[bossNumber].bossName + "_timer", UnbiasedTime.Instance.Now().AddSeconds(0));
+            coolDownEndTimeStamp = this.ReadTimestamp(profile.bosses[bossNumber].bossName + "_timer", UnbiasedTime.Instance.Now().AddSeconds(60));
         }
     }
 
@@ -88,8 +53,4 @@ public class BossObject : ScriptableObject {
         PlayerPrefs.SetString(key, time.ToBinary().ToString());
     }
     //-------------
-
-
-
-
 }

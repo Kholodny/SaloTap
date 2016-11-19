@@ -185,22 +185,11 @@ public class PlayerProfile : MonoBehaviour {
 			levelSlider.value = 0;
 		}//Конец реализации ползунка опыта
 	}
+    
+   /* public void SetBossCoolDown(){
+        bosses[currentBoss].bossName;
+    }*/
 
-	/*void ComboClick(){
-		if (click.clickBoost == 2) {
-			ptsPerClick *= 2;
-			plusXP *= 2;
-		} else if (click.clickBoost == 4) {
-			ptsPerClick *= 4;
-			plusXP *= 4;
-		} else if (click.clickBoost == 6) {
-			ptsPerClick *= 6;
-			plusXP *= 6;
-		} else {
-			ptsPerClick = defaultPtsPerClick;
-			plusXP = DefaultPlusXP;
-		}
-	}*/
 
 	private void StartRefreshTimer(float maxTime){
 		if(maxTime > 0){
